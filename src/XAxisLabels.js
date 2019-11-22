@@ -337,7 +337,7 @@ class XAxisLabels extends React.Component {
           });
 
           const style = defaults(
-            { textAnchor: 'middle' },
+            { textAnchor: 'end' },
             getValue(labelStyle, { x, y, ...label }, i),
             XAxisLabels.defaultProps.labelStyle,
           );
@@ -355,6 +355,7 @@ class XAxisLabels extends React.Component {
                   y,
                   className,
                   dy: '0.8em',
+                  transform: `rotate(-65, ${x}, ${y - 150})`,
                   style,
                 }}
               >
